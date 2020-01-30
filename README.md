@@ -1,0 +1,3 @@
+# GraphQL TypeScript template
+
+TBA
