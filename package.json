@@ -1,8 +1,25 @@
 {
-  "name": "graphql-typescript-template",
+  "name": "@jaanjah/graphql-typescript-template",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:JaanJah/graphql-typescript-template.git",
+  "description": "TBA",
+  "keywords": ["graphql", "typescript", "template"],
+  "homepage": "https://github.com/JaanJah/graphql-typescript-template/blob/master/README.md",
+  "bugs": "https://github.com/JaanJah/graphql-typescript-template/issues",
+  "license": "MIT",
   "author": "JaanJahimees",
-  "license": "MIT"
+  "contributors": [],
+  "main": "src/main.ts",
+  "repository": "git@github.com:JaanJah/graphql-typescript-template.git",
+  "scripts": {},
+  "config": {},
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {},
+  "bundledDependencies": [],
+  "optionalDependencies": {},
+  "engines": {
+    "node": "12"
+  }
 }
