@@ -1,0 +1,37 @@
+// https://www.typescriptlang.org/docs/handbook/compiler-options.html
+{
+  "compilerOptions": {
+    // Redirect output structure to the directory.
+    "outDir": "./build/",
+    // Generates corresponding '.map' file.
+    "sourceMap": true,
+    // Enable all strict type-checking options.
+    "strict": true,
+    // Specify module code generation: "None", "CommonJS", "AMD", "System", "UMD", "ES6", "ES2015" or "ESNext".
+    "module": "CommonJS",
+    // Determine how modules get resolved. Either "Node" for Node.js/io.js style resolution, or "Classic".
+    "moduleResolution": "Node",
+    // Specify ECMAScript target version:
+    // "ES3" (default), "ES5", "ES6"/"ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020", "ESNext"
+    "target": "ES2020",
+    // Enables experimental support for ES decorators.
+    "experimentalDecorators": true,
+    // Emit __importStar and __importDefault helpers for runtime babel ecosystem compatibility
+    // and enable --allowSyntheticDefaultImports for typesystem compatibility.
+    "esModuleInterop": true,
+    // List of folders to include type definitions from.
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ],
+    // List of library files to be included in the compilation.
+    "lib": [
+      "dom",
+      "es2020",
+      "esnext"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
