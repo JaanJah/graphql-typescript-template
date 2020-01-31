@@ -17,7 +17,6 @@
     // Enables experimental support for ES decorators.
     "experimentalDecorators": true,
     // Emit __importStar and __importDefault helpers for runtime babel ecosystem compatibility
-    // and enable --allowSyntheticDefaultImports for typesystem compatibility.
     "esModuleInterop": true,
     // List of folders to include type definitions from.
     "typeRoots": [

@@ -1,26 +1,20 @@
 import express from 'express';
-import {ApolloServer, gql} from "apollo-server-express";
+import {ApolloServer} from "apollo-server-express";
+import typeDefs from "./graphql/typeDefs";
+import resolvers from "./graphql/resolvers";
 
+// Create an express application
+const app = express();
+export const server = async () => {
+    const apolloServer = new ApolloServer({typeDefs: await typeDefs(), resolvers});
 
-// Construct a schema, using GraphQL schema language
-const typeDefs = gql`
-    type Query {
-        hello: String
-    }
-`;
+    // Apply express application as middleware
+    apolloServer.applyMiddleware({ app });
 
-// Provide resolver functions for your schema fields
-const resolvers = {
-    Query: {
-        hello: () => 'Hello world!',
-    },
+    // Start listening the server
+    app.listen({ port: 4000 }, () =>
+        console.log(`🚀 Server ready at http://localhost:4000${apolloServer.graphqlPath}`)
+    );
 };
 
-const server = new ApolloServer({ typeDefs, resolvers });
-
-const app = express();
-server.applyMiddleware({ app });
-
-app.listen({ port: 4000 }, () =>
-    console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
-);
+server().then();
