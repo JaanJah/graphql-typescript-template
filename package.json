@@ -1,0 +1,8 @@
+{
+  "name": "graphql-typescript-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JaanJah/graphql-typescript-template.git",
+  "author": "JaanJahimees",
+  "license": "MIT"
+}
