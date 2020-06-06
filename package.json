@@ -20,7 +20,7 @@
   },
   "config": {},
   "dependencies": {
-    "apollo-server-express": "^2.9.16",
+    "apollo-server-express": "^2.14.2",
     "graphql-import": "^1.0.0-beta.2"
   },
   "devDependencies": {
